@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+/* font-family: 'Joti One', sans-serif;
+font-family: 'Comfortaa', sans-serif; */
+
+body {
+    background-color: bisque;
+    background-image: url("../images/wood-pattern.jpg");
+    font-family: 'Comfortaa', sans-serif;
+}
+
+.container {
+    width: 75%;
+    margin: 0 auto;
+    background: white;
+}
+header {
+    text-align: center;
+    border-bottom: 5px solid black;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+header nav {
+    padding: 1.5em 0;
+}
+header nav ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+header nav ul li {
+    list-style-type: none;
+    font-family: 'Joti One', sans-serif;
+}
+
+h1 {
+    height: 59px;
+    width: 100px;
+}
+
+footer > nav {
+     border-top: 5px solid black;
+     padding-top: 1.5em;
+}
+footer nav ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+footer nav ul li {
+    list-style-type: none;
+}
+footer > p {
+    text-align: center;
+    padding: 1.5em 0;
+    margin: 0;
+}
+
+main {
+    margin: 1em;
+    display: grid;
+    grid-template-columns: 1/2 1/2;
+    grid-template-areas: 
+    "about products"
+    "news races";
+
+    grid-column-gap: 0.5rem;
+    grid-row-gap: 0.5rem;
+}
+
+.image {
+    grid-area: image;
+}
+.about {
+    grid-area: about;
+}
+.products {
+    grid-area: products;
+}
+.news {
+    grid-area: news;
+}
+.races {
+    grid-area: races;
+}
+
+a {
+    color: #007bff;
+    transition-property: color;
+    transition-duration: 1s;
+}
+a:hover {
+    text-decoration: none;
+    color: #ff1100;
+}
+
+div > img {
+    height: auto;
+    width: auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background: white;
+    }
+    .container {
+        width: 100%;
+    }
+
+    main {
+        grid-template-areas:
+        "about about"
+        "products products"
+        "news news"
+        "races races"
+    }
+    div > img {
+        height: 100%;
+        width: 100%;
+        max-height: none;
+        max-width: none;
+    }
+  }
